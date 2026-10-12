@@ -76,3 +76,9 @@ def get_stats():
         "average_temperature": round(average_temp(readings), 2)
     }
 
+
+@app.post("/devices", status_code=201)
+def create_device(device: dict):
+    readings.append(device)
+    return device
+
