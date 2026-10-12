@@ -69,3 +69,10 @@ def get_device(name: str):
         detail="No device called " + name
     )
 
+
+@app.get("/stats")
+def get_stats():
+    return {
+        "average_temperature": round(average_temp(readings), 2)
+    }
+
