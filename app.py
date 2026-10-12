@@ -34,5 +34,4 @@ def hottest_device(devices):
             hottest = device
 
     return hottest
-
 print(f"Hottest device: {hottest_device(readings)}")
