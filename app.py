@@ -35,3 +35,9 @@ def hottest_device(devices):
 
     return hottest
 print(f"Hottest device: {hottest_device(readings)}")
+
+
+@app.get("/devices")
+def get_devices():
+    return readings
+
