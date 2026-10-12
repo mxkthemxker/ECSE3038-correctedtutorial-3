@@ -46,3 +46,15 @@ def get_devices():
 def get_hottest():
     return hottest_device(readings)
 
+
+@app.get("/devices/online")
+def get_online_devices():
+    online_devices = []
+
+    for device in readings:
+        if device["online"] == True:
+            online_devices.append(device)
+
+    return online_devices
+
+
